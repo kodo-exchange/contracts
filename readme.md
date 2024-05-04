@@ -35,7 +35,7 @@ Kodo Exchange ensures transparency in terms of risks, changes, and the security 
 
 ## Contracts
 
-The contracts we've deployed
+The contracts we've deployed on Hekla
 
 | Name               | Address                                                                                                                               |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
@@ -51,6 +51,7 @@ The contracts we've deployed
 | Minter             | [0x5FEca4927Ddfa7fD6e397fA466e1290EC4E7dFa0](https://hekla.taikoscan.network/address/0x5FEca4927Ddfa7fD6e397fA466e1290EC4E7dFa0) |
 | tLRC               | [0xfa510751d09a3a1fF34E35c71C4b476D7D5AeAa7](https://hekla.taikoscan.network/address/0xfa510751d09a3a1fF34E35c71C4b476D7D5AeAa7) |
 | tMIM               | [0x55940343F4238b5c04c993A47d90C44336a1f809](https://hekla.taikoscan.network/address/0x55940343F4238b5c04c993A47d90C44336a1f809) |
+
 
 
 Existing contract legos on Taiko Hekla we've utilized
