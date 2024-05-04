@@ -65,4 +65,4 @@ Existing contract legos on Taiko Hekla we've utilized
 
 ## Tokenlist
 
-We maintain a [token list](https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/tokenlist.json). If you want your token to be listed, make a PR to this repo([kodo-exchange/tokenlist](https://github.com/kodo-exchange/tokenlist)) and become our partner.
+We are maintaining a [token list](https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/tokenlist.json). If you want your token to be listed, make a PR to this repo([kodo-exchange/tokenlist](https://github.com/kodo-exchange/tokenlist)) and become our partner.
