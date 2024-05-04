@@ -31,6 +31,14 @@ const config: HardhatUserConfig = {
         blockNumber: 16051852
       }
     },
+    taikoA7: {
+      url: "https://rpc.hekla.taiko.xyz",
+      accounts: [process.env.PRIVATE_KEY!],
+    },
+    taikoA6: {
+      url: "https://rpc.katla.taiko.xyz",
+      accounts: [process.env.PRIVATE_KEY!],
+    },
     opera: {
       url: "https://rpc.fantom.network",
       accounts: [process.env.PRIVATE_KEY!],
@@ -77,11 +85,28 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
-      opera: process.env.FTM_SCAN_API_KEY!,
-      ftmTestnet: process.env.FTM_SCAN_API_KEY!,
+      taikoA6: "routescan", // apiKey is not required, just set a placeholder
+      taikoA7: "routescan", // apiKey is not required, just set a placeholder
       optimisticEthereum: process.env.OP_SCAN_API_KEY!,
-      optimisticKovan: process.env.OP_SCAN_API_KEY!,
-    }
+    },
+    customChains: [
+      {
+        network: "taikoA7",
+        chainId: 167009,
+        urls: {
+          apiURL: "https://api.routescan.io/v2/network/testnet/evm/167009/etherscan",
+          browserURL: "https://routescan.io"
+        }
+      },
+      {
+        network: "taikoA6",
+        chainId: 167008,
+        urls: {
+          apiURL: "https://api.routescan.io/v2/network/testnet/evm/167008/etherscan",
+          browserURL: "https://routescan.io"
+        }
+      }
+    ]
   }
 };
 
