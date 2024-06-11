@@ -1,6 +1,6 @@
 # Kodo Protocol
 
-This repo contains the contracts for Kodo, an AMM on Taiko inspired by Velodrome & Solidly.
+This repo contains the contracts for Kodo, an AMM on Taiko inspired by Velodrome & Solidly. [Learn more](https://docs.kodo.exchange/)
 
 ## Testing
 
@@ -31,38 +31,36 @@ Deployment guide:
 
 ## Security
 
-Kodo Exchange ensures transparency in terms of risks, changes, and the security audits of smart contracts. As a friendly fork of Velodrome and Solidly, you can find the security records for Velodrome [here](https://github.com/velodrome-finance/docs/blob/main/pages/security.md) and for Solidly [here](https://github.com/froggerdev/solidly).
+Kodo Exchange ensures transparency in terms of risks, changes, and the security audits of smart contracts. As a friendly fork of Velodrome and Solidly, you can find the security records for Velodrome [here](https://github.com/velodrome-finance/docs/blob/main/pages/security.md) and for Solidly [here](https://github.com/froggerdev/solidly). We will soon publish our own audit results.
 
 ## Contracts
 
-The contracts we've deployed on Hekla
+The contracts we've deployed on Taiko
 
-| Name               | Address                                                                                                                               |
-| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
-| Kodo               | [0xf3B2442b1f1c37FFaF2f2A2d93a2954eaF660646](https://hekla.taikoscan.network/address/0xf3B2442b1f1c37FFaF2f2A2d93a2954eaF660646) |
-| PairFactory        | [0xA2f411B2Fa92276Be7a3901031800C0027a712D3](https://hekla.taikoscan.network/address/0xA2f411B2Fa92276Be7a3901031800C0027a712D3) |
-| Router             | [0xF0B1CA5058E9646724A0B7eB3E755Fa60552DF69](https://hekla.taikoscan.network/address/0xF0B1CA5058E9646724A0B7eB3E755Fa60552DF69) |
-| BribeFactory       | [0x48a0f01480F47ac57b0140fa9f7E201e040FB2A6](https://hekla.taikoscan.network/address/0x48a0f01480F47ac57b0140fa9f7E201e040FB2A6) |
-| GaugeFactory       | [0x4fc297C0Ba13D0C075d3B647D3D1F4f258a3701E](https://hekla.taikoscan.network/address/0x4fc297C0Ba13D0C075d3B647D3D1F4f258a3701E) |
-| Voter              | [0xa1915120905739e8f49A4be159F2e8FBa7202F2D](https://hekla.taikoscan.network/address/0xa1915120905739e8f49A4be159F2e8FBa7202F2D) |
-| VotingEscrow       | [0xE2A0c1EB3b095cE61c08515aa56c323B38dcB5D3](https://hekla.taikoscan.network/address/0xE2A0c1EB3b095cE61c08515aa56c323B38dcB5D3) |
-| VeArtProxy         | [0x3977614016fcAbDa5eAF28AAea82549E02cB97AC](https://hekla.taikoscan.network/address/0x3977614016fcAbDa5eAF28AAea82549E02cB97AC) |
-| RewardsDistributor | [0xfCbEE101223cCccc30DAe2d98BF284f541d883DA](https://hekla.taikoscan.network/address/0xfCbEE101223cCccc30DAe2d98BF284f541d883DA) |
-| Minter             | [0x5FEca4927Ddfa7fD6e397fA466e1290EC4E7dFa0](https://hekla.taikoscan.network/address/0x5FEca4927Ddfa7fD6e397fA466e1290EC4E7dFa0) |
-| tLRC               | [0xfa510751d09a3a1fF34E35c71C4b476D7D5AeAa7](https://hekla.taikoscan.network/address/0xfa510751d09a3a1fF34E35c71C4b476D7D5AeAa7) |
-| tMIM               | [0x55940343F4238b5c04c993A47d90C44336a1f809](https://hekla.taikoscan.network/address/0x55940343F4238b5c04c993A47d90C44336a1f809) |
+| Name               | Address                                                                                                               |
+| :----------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| Kodo               | [0x7e91F29F8a213c8311712A8FC8c61219fb9477CB](https://taikoscan.io/address/0x7e91F29F8a213c8311712A8FC8c61219fb9477CB) |
+| PairFactory        | [0x535E02960574d8155596a73c7Ad66e87e37Eb6Bc](https://taikoscan.io/address/0x535E02960574d8155596a73c7Ad66e87e37Eb6Bc) |
+| Router             | [0xd04d75E1CDe512b195E70C6c18Cf7Ec4b2B12f41](https://taikoscan.io/address/0xd04d75E1CDe512b195E70C6c18Cf7Ec4b2B12f41) |
+| BribeFactory       | [0x7149E14784f9d88B5497a9bf135c643151379F95](https://taikoscan.io/address/0x7149E14784f9d88B5497a9bf135c643151379F95) |
+| GaugeFactory       | [0x3a9E14D73AD40E70baFaFfefE8893Eb318Fc2312](https://taikoscan.io/address/0x3a9E14D73AD40E70baFaFfefE8893Eb318Fc2312) |
+| Voter              | [0xbf6fabcc707aC239Be2D7818797745F678A411ad](https://taikoscan.io/address/0xbf6fabcc707aC239Be2D7818797745F678A411ad) |
+| VotingEscrow       | [0x6c4A102B7aafFA9a8C9440c08A5c09deECAFB324](https://taikoscan.io/address/0x6c4A102B7aafFA9a8C9440c08A5c09deECAFB324) |
+| VeArtProxy         | [0x8ba3C594Dc3796c171a1B7F0e143577abE03300F](https://taikoscan.io/address/0x8ba3C594Dc3796c171a1B7F0e143577abE03300F) |
+| RewardsDistributor | [0x1A805BBcE7F87365daC956cFD8d078ef827E73d1](https://taikoscan.io/address/0x1A805BBcE7F87365daC956cFD8d078ef827E73d1) |
+| Minter             | [0x0e16aA850AF7956B476Ad6056ead67A32f099504](https://taikoscan.io/address/0x0e16aA850AF7956B476Ad6056ead67A32f099504) |
+| MerkleClaim        | [0x7E034Ef620D2fb403e8bB6a1130670110287A7a1](https://taikoscan.io/address/0x7E034Ef620D2fb403e8bB6a1130670110287A7a1) |
+| KodoLibrary        | [0x46E9cef07e01ab5a73E9B10cfb423E9319cD68c9](https://taikoscan.io/address/0x46E9cef07e01ab5a73E9B10cfb423E9319cD68c9) |
 
+Existing contract legos on Taiko we've utilized
 
-
-Existing contract legos on Taiko Hekla we've utilized
-
-| Name               | Address                                                                                                                               |
-| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
-| WETH               | [0xae2C46ddb314B9Ba743C6dEE4878F151881333D9](https://hekla.taikoscan.network/address/0xae2C46ddb314B9Ba743C6dEE4878F151881333D9) |
-| USDC               | [0x0011E559da84dde3f841e22dc33F3adbF184D84A](https://hekla.taikoscan.network/address/0x0011E559da84dde3f841e22dc33F3adbF184D84A) |
-| TTKOh.t            | [0xebF1f662bF092ff0D913a9fe9D7179B0efEF1611](https://hekla.taikoscan.network/address/0xebF1f662bF092ff0D913a9fe9D7179B0efEF1611) |
-| HORSE.t            | [0x2029Ca1e4A5954781a271d6Fa3598bF4434969f5](https://hekla.taikoscan.network/address/0x2029Ca1e4A5954781a271d6Fa3598bF4434969f5) |
+| Name               | Address                                                                                                               |
+| :----------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| WETH               | [0xA51894664A773981C6C112C43ce576f315d5b1B6](https://taikoscan.io/address/0xA51894664A773981C6C112C43ce576f315d5b1B6) |
+| USDC               | [0x07d83526730c7438048D55A4fc0b850e2aaB6f0b](https://taikoscan.io/address/0x07d83526730c7438048D55A4fc0b850e2aaB6f0b) |
+| TAIKO              | [0xA9d23408b9bA935c230493c40C73824Df71A0975](https://taikoscan.io/address/0xA9d23408b9bA935c230493c40C73824Df71A0975) |
+| Multicall3         | [0xcb2436774C3e191c85056d248EF4260ce5f27A9D](https://taikoscan.io/address/0xcb2436774C3e191c85056d248EF4260ce5f27A9D) |
 
 ## Tokenlist
 
-We are maintaining a [token list](https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/tokenlist.json). If you want your token to be listed, make a PR to this repo([kodo-exchange/tokenlist](https://github.com/kodo-exchange/tokenlist)) and become our partner.
+We are maintaining a [tokenlist](https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/tokenlist.json). If you want your token to be listed, make a PR to this repo([kodo-exchange/tokenlist](https://github.com/kodo-exchange/tokenlist)) and become our partner.
