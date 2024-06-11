@@ -1,5 +1,5 @@
 import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-etherscan";
+import "@nomicfoundation/hardhat-verify";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-preprocessor";
@@ -13,6 +13,7 @@ import { resolve } from "path";
 
 import { config as dotenvConfig } from "dotenv";
 import { HardhatUserConfig, task } from "hardhat/config";
+import taikoConfig from "./tasks/deploy/constants/taikoConfig";
 
 dotenvConfig({ path: resolve(__dirname, "./.env") });
 
@@ -22,22 +23,37 @@ const remappings = fs
   .filter(Boolean)
   .map((line) => line.trim().split("="));
 
+const accounts = {
+  count: 10,
+  initialIndex: process.env.MNEMONIC_INDEX ? parseInt(process.env.MNEMONIC_INDEX) : 0,
+  mnemonic: process.env.MNEMONIC,
+  path: "m/44'/60'/0'/0",
+};
+
 const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       initialBaseFeePerGas: 0,
-      forking: {
-        url: `https://opt-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
-        blockNumber: 16051852
-      }
+      // forking: {
+      //   url: `https://opt-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+      //   blockNumber: 16051852
+      // }
+    },
+    taiko: {
+      url: "https://rpc.mainnet.taiko.xyz",
+      accounts: accounts,
     },
     taikoA7: {
       url: "https://rpc.hekla.taiko.xyz",
-      accounts: [process.env.PRIVATE_KEY!],
+      accounts: accounts,
     },
     taikoA6: {
       url: "https://rpc.katla.taiko.xyz",
-      accounts: [process.env.PRIVATE_KEY!],
+      accounts: accounts,
+    },
+    holesky: {
+      url: "https://ethereum-holesky-rpc.publicnode.com",
+      accounts: accounts,
     },
     opera: {
       url: "https://rpc.fantom.network",
@@ -57,13 +73,17 @@ const config: HardhatUserConfig = {
     },
   },
   solidity: {
-    version: "0.8.13",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
+    compilers: [
+      {
+        version: "0.8.13",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
-    },
+    ],
   },
   // This fully resolves paths for imports in the ./lib directory for Hardhat
   preprocess: {
@@ -86,16 +106,24 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: {
       taikoA6: "routescan", // apiKey is not required, just set a placeholder
-      taikoA7: "routescan", // apiKey is not required, just set a placeholder
-      optimisticEthereum: process.env.OP_SCAN_API_KEY!,
+      taikoA7: process.env.ETHERSCAN_API_KEY,
+      taiko: process.env.ETHERSCAN_API_KEY,
     },
     customChains: [
+      {
+        network: "taiko",
+        chainId: 167000,
+        urls: {
+          apiURL: "https://api.taikoscan.io/api",
+          browserURL: "https://taikoscan.io"
+        }
+      },
       {
         network: "taikoA7",
         chainId: 167009,
         urls: {
-          apiURL: "https://api.routescan.io/v2/network/testnet/evm/167009/etherscan",
-          browserURL: "https://routescan.io"
+          apiURL: "https://api-testnet.taikoscan.io/api",
+          browserURL: "https://hekla.taikoscan.io"
         }
       },
       {
@@ -107,7 +135,11 @@ const config: HardhatUserConfig = {
         }
       }
     ]
+  },
+  sourcify: {
+    enabled: false
   }
+
 };
 
 export default config;
