@@ -6,7 +6,7 @@ import "contracts/interfaces/IKodo.sol";
 contract Kodo is IKodo {
 
     string public constant name = "Kodo Token";
-    string public constant symbol = "KDO";
+    string public constant symbol = "KODO";
     uint8 public constant decimals = 18;
     uint public totalSupply = 0;
 
@@ -15,8 +15,6 @@ contract Kodo is IKodo {
 
     bool public initialMinted;
     address public minter;
-    address public redemptionReceiver;
-    address public merkleClaim;
 
     event Transfer(address indexed from, address indexed to, uint value);
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -32,21 +30,16 @@ contract Kodo is IKodo {
         minter = _minter;
     }
 
-    function setRedemptionReceiver(address _receiver) external {
-        require(msg.sender == minter);
-        redemptionReceiver = _receiver;
-    }
-
-    function setMerkleClaim(address _merkleClaim) external {
-        require(msg.sender == minter);
-        merkleClaim = _merkleClaim;
-    }
-
-    // Initial mint: total 200M
+    // Initial mint: total 260M
+    // 15% ( 60M) - community airdrop
+    // 40% (160M) - future airdrop - locked 2-6 months to ditribute as veKODO locked 4 years
+    //  5% ( 20M) - voting incentive
+    //  3% ( 12M) - contriutors compensation - locked for 6 months then linear unlock in 6 months
+    //  2% (  8M) - genesis pool
     function initialMint(address _recipient) external {
         require(msg.sender == minter && !initialMinted);
         initialMinted = true;
-        _mint(_recipient, 200 * 1e6 * 1e18); // 200M KDO
+        _mint(_recipient, 260 * 1e6 * 1e18); // 260M KODO
     }
 
     function approve(address _spender, uint _value) external returns (bool) {
@@ -87,12 +80,6 @@ contract Kodo is IKodo {
 
     function mint(address account, uint amount) external returns (bool) {
         require(msg.sender == minter);
-        _mint(account, amount);
-        return true;
-    }
-
-    function claim(address account, uint amount) external returns (bool) {
-        require(msg.sender == redemptionReceiver || msg.sender == merkleClaim);
         _mint(account, amount);
         return true;
     }

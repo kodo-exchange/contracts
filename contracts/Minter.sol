@@ -19,7 +19,7 @@ contract Minter is IMinter {
     IVoter public immutable _voter;
     IVotingEscrow public immutable _ve;
     IRewardsDistributor public immutable _rewards_distributor;
-    uint public weekly = 15_000_000 * 1e18; // represents a starting weekly emission of 15M KDO (KDO has 18 decimals)
+    uint public weekly = 15_000_000 * 1e18; // represents a starting weekly emission of 15M KODO (KODO has 18 decimals)
     uint public active_period;
     uint internal constant LOCK = 86400 * 7 * 52 * 4;
 
@@ -101,11 +101,8 @@ contract Minter is IMinter {
     function calculate_growth(uint _minted) public view returns (uint) {
         uint _veTotal = _ve.totalSupply();
         uint _kodoTotal = _kodo.totalSupply();
-        return
-            (((((_minted * _veTotal) / _kodoTotal) * _veTotal) / _kodoTotal) *
-                _veTotal) /
-            _kodoTotal /
-            2;
+
+        return (((_minted * (_kodoTotal - _veTotal)) / _kodoTotal) * (_kodoTotal - _veTotal)) / _kodoTotal / 2;
     }
 
     // update period can only be called once per cycle (1 week)
