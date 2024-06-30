@@ -60,6 +60,7 @@ Existing contract legos on Taiko we've utilized
 | USDC               | [0x07d83526730c7438048D55A4fc0b850e2aaB6f0b](https://taikoscan.io/address/0x07d83526730c7438048D55A4fc0b850e2aaB6f0b) |
 | USDT               | [0x2DEF195713CF4a606B49D07E520e22C17899a736](https://taikoscan.io/address/0x2DEF195713CF4a606B49D07E520e22C17899a736) |
 | USDC.e             | [0x19e26B0638bf63aa9fa4d14c6baF8D52eBE86C5C](https://taikoscan.io/address/0x19e26B0638bf63aa9fa4d14c6baF8D52eBE86C5C) |
+| LRC                | [0xd347949f8c85d9f3d6b06bfc4f8c2e07c161f064](https://taikoscan.io/address/0xd347949f8c85d9f3d6b06bfc4f8c2e07c161f064) |
 | TAIKO              | [0xA9d23408b9bA935c230493c40C73824Df71A0975](https://taikoscan.io/address/0xA9d23408b9bA935c230493c40C73824Df71A0975) |
 | Multicall3         | [0xcb2436774C3e191c85056d248EF4260ce5f27A9D](https://taikoscan.io/address/0xcb2436774C3e191c85056d248EF4260ce5f27A9D) |
 
