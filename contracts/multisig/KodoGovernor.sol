@@ -17,7 +17,7 @@
 */
 
 /*
-  This contract is a modified version of the 0xGovernor contract from the 0x monorepo.
+  This contract is the 0xGovernor contract from the 0x monorepo.
   https://github.com/0xProject/0x-monorepo/blob/development/contracts/multisig/contracts/src/ZeroExGovernor.sol
 */
 

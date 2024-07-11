@@ -1,6 +1,10 @@
 // solhint-disable
 pragma solidity ^0.5.9;
 
+/*
+  This contract is from the 0x monorepo.
+  https://github.com/0xProject/0x-monorepo/blob/development/contracts/multisig/contracts/src/MultiSigWallet.sol
+*/
 
 /// @title Multisignature wallet - Allows multiple parties to agree on transactions before execution.
 /// @author Stefan George - <stefan.george@consensys.net>

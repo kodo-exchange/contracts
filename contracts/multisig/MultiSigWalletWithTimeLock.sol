@@ -16,6 +16,11 @@
 
 */
 
+/*
+  This contract is from the 0x monorepo.
+  https://github.com/0xProject/0x-monorepo/blob/development/contracts/multisig/contracts/src/MultiSigWalletWithTimeLock.sol
+*/
+
 pragma solidity ^0.5.9;
 
 import "./utils/LibSafeMath.sol";
