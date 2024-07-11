@@ -51,6 +51,7 @@ The contracts we've deployed on Taiko
 | Minter             | [0x0e16aA850AF7956B476Ad6056ead67A32f099504](https://taikoscan.io/address/0x0e16aA850AF7956B476Ad6056ead67A32f099504) |
 | MerkleClaim        | [0x7E034Ef620D2fb403e8bB6a1130670110287A7a1](https://taikoscan.io/address/0x7E034Ef620D2fb403e8bB6a1130670110287A7a1) |
 | KodoLibrary        | [0x46E9cef07e01ab5a73E9B10cfb423E9319cD68c9](https://taikoscan.io/address/0x46E9cef07e01ab5a73E9B10cfb423E9319cD68c9) |
+| MultisigWallet     | [0xB020af366819E68eCbD8ed5EC345FD85D7b1D6B2](https://taikoscan.io/address/0xB020af366819E68eCbD8ed5EC345FD85D7b1D6B2) |
 
 Existing contract legos on Taiko we've utilized
 

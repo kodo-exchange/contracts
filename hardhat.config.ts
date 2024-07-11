@@ -83,6 +83,15 @@ const config: HardhatUserConfig = {
           },
         },
       },
+      {
+        version: "0.5.9",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 1000000,
+          },
+        },
+      },
     ],
   },
   // This fully resolves paths for imports in the ./lib directory for Hardhat
